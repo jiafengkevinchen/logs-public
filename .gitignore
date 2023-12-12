@@ -1,0 +1,10 @@
+*dta
+data*
+*DS_Store
+_output*
+.Rproj.user
+.Rhistory
+.Rdata
+.vscode/
+temp/*
+*.log

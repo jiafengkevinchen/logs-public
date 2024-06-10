@@ -217,6 +217,8 @@ se_ATEpercent_covariates <-
 
 tidy_results_covariates <- data.frame(
     term = c("beta_0", "beta_1", "Implied Prop. Effect"),
+    # The following line corrects an error in Table 4 in the published version. 
+    # See the corrigendum for details.
     estimate = c(coefficients(poisson_with_covariates)[c("(Intercept)", "public")], implied_ATEpercent_covariates),
     std.error = c(sqrt(diag(poisson_with_covariates$cov.scaled[c("(Intercept)", "public"), c("(Intercept)", "public")])), se_ATEpercent_covariates)
 )
